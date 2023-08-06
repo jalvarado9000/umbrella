@@ -1,7 +1,11 @@
 require "http"
 
+pp "howdy"
+
 # Assemble the full URL string by adding the first part, the API token, and the last part together
-pirate_weather_url = "https://api.pirateweather.net/forecast/" + pirate_weather_api_key + "/41.8887,-87.6355"
+#pirate_weather_url = "https://api.pirateweather.net/forecast/" + pirate_weather_api_key + "/41.8887,-87.6355"
+
+pp ENV.fetch("GMAPS_KEY")
 
 # Place a GET request to the URL
 raw_response = HTTP.get(pirate_weather_url)
