@@ -8,8 +8,8 @@
 require "http"
 
 pp "Where are you located?"
-userLocation  = "Chicago"
-#userLocation = gets.chomp
+#userLocation  = "Chicago"
+userLocation = gets.chomp
 
 
 #userLocation = gets.chomp.gsub(" ", "%20")
@@ -34,6 +34,8 @@ parsed_response = JSON.parse(raw_response)
 lat = parsed_response.fetch("results").at(0).fetch("geometry").fetch("location").fetch("lat")
 lng = parsed_response["results"][0]["geometry"]["location"]["lng"]
 
+pp lat
+pp lng
 
 pirate_weather_url = "https://api.pirateweather.net/forecast/" +  ENV.fetch("PIRATE_WEATHER_KEY") + "/" + lat.to_s + "," + lng.to_s
 
