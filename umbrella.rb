@@ -6,6 +6,7 @@ pp "howdy"
 #pirate_weather_url = "https://api.pirateweather.net/forecast/" + pirate_weather_api_key + "/41.8887,-87.6355"
 
 pp ENV.fetch("GMAPS_KEY")
+pp ENV.fetch("PIRATE_WEATHER_KEY")
 
 # Place a GET request to the URL
 raw_response = HTTP.get(pirate_weather_url)
